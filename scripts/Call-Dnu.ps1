@@ -14,6 +14,7 @@ Write-Debug "Current Path: $env:Path"
 Write-Verbose "Setting npm log level to 'error'"
 $env:npm_config_loglevel="error"
 
+#Setting npm loglevel to 'error' to avoid build failures due to package warnings.
 #Call dnu
 Write-Verbose "Executing: dnu $args"
 & dnu $args
